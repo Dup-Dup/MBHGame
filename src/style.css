@@ -1,0 +1,129 @@
+@font-face {
+  font-family: "Nunito";
+  src: url("./Nunito-Regular.ttf") format("truetype");
+}
+body {
+  background: #f2f2f2;
+}
+.main-modal {
+  position: relative;
+  max-width: 500px;
+  margin: auto;
+  border: 1px solid #ffffff;
+  background-color: #ffffff;
+  border-radius: 10px;
+  padding: 20px;
+  font-family: "Nunito";
+  box-shadow: 0 0 2px;
+}
+.title {
+  width: fit-content;
+  margin: 30px auto;
+  font-weight: bolder;
+  font-size: 18px;
+  color: #333333;
+}
+.btn-cross {
+  font-weight: bold;
+  position: absolute;
+  right: 30px;
+  top: 20px;
+  background-color: #a1a1a1;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  text-align: center;
+  padding: 5px;
+}
+.btn-cross:hover {
+  cursor: pointer;
+  background-color: #a9a9a9;
+}
+.ques-img {
+  width: 500px;
+}
+.option-sec {
+  background-color: #efeff4;
+  padding: 10px 20px;
+  border-radius: 20px;
+  color: #333333;
+  font-weight: bold;
+  margin: 15px auto;
+  width: fit-content;
+  font-size: 14px;
+}
+.option-sec:hover {
+  cursor: pointer;
+  background-color: #333333;
+  color: #efeff4;
+}
+.selected-sec {
+  background-color: #333333;
+  color: #efeff4;
+}
+.option-sec label {
+  cursor: pointer;
+}
+.option-sec input[type="radio"] {
+  display: none;
+}
+.btm-btn-grp {
+  display: flex;
+  align-items: center;
+  width: 350px;
+  justify-content: space-around;
+  margin: 50px auto 20px auto;
+}
+.btn-next:hover {
+  cursor: pointer;
+  opacity: 0.7;
+}
+button:focus {
+  outline: none;
+}
+.btn-back {
+  color: #a1a1a1;
+  background-color: #efeff4;
+  padding: 0 20px;
+  height: 35px;
+  border-radius: 5px;
+  border: none;
+}
+.btn-back:hover {
+  cursor: pointer;
+  color: #efeff4;
+  background-color: #a1a1a1;
+}
+.btn-next {
+  color: #ffffff;
+  background-image: linear-gradient(254deg, #ff8960 54%, #ff62a5 46%);
+  padding: 0 20px;
+  height: 35px;
+  border-radius: 5px;
+  border: none;
+}
+.btn-next:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+.numbering {
+  font-size: 12px;
+  color: #333333;
+  font-weight: bold;
+}
+.input-field {
+  border-radius: 5px;
+  background-color: #efeff4;
+  border: 1px solid #efeff4;
+  height: 40px;
+  padding-left: 10px;
+  margin-bottom: 20px;
+  text-align: center;
+  display: block;
+  width: 300px;
+}
+.input-holder {
+  width: fit-content;
+  margin: 50px auto;
+  text-align: center;
+}
