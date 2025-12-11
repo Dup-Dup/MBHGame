@@ -2,11 +2,12 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
-  mode: 'development',
+  mode: process.env.NODE_ENV === 'production' ? 'production' : 'development',
   entry: path.resolve(__dirname, 'src', 'index.js'),
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: 'bundle.js'
+    filename: 'bundle.js',
+    publicPath: './'
   },
   module: {
     rules: [
@@ -28,12 +29,17 @@ module.exports = {
           {
             loader: 'file-loader',
             options: {
-              name: '[path][name].[ext]',
-            },
-          },
-        ],
+              name: '[name].[ext]',
+              outputPath: 'assets/'
+            }
+          }
+        ]
       }
     ]
   },
-  plugins: [new HtmlWebpackPlugin({ template: path.resolve(__dirname, 'src', 'index.html') })]
+  plugins: [
+    new HtmlWebpackPlugin({
+      template: path.resolve(__dirname, 'src', 'index.html')
+    })
+  ]
 };
